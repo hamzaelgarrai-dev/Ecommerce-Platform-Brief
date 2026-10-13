@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <style>
+        .marquee {
+            width: 100%;
+            background-color: #a87560;
+            color: white;
+            padding: 15px 0;
+        }
+        .marquee-content {
+            display: flex;
+            width: max-content;
+            gap: 40px;
+            white-space: nowrap;
+            animation: defilement 10s linear infinite;
+        }
+        @keyframes defilement {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-30%);
+            }
+        }
+        .menu-item{
+            padding: 10px;
+            list-style: none;
+            position: relative;
+            transition: color 0.3s ease;
+
+        }
+        .menu-item::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #a87560;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease;
+        }
+        .menu-item:hover::after,.active::after{
+            width: 100%;
+        }
+        .menu-item:hover,
+        .active {
+            color: #a87560;
+        }
+
+        i:hover{
+            color: #a87560;
+            font-size: 21px;
+        }
+        h1{
+            font-family: 'Irish Grover', cursive;;
+        }
+        .icons{
+            position: relative;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+        </div>
+    </div>
+    <header class="relative  flex items-center justify-center px-10 py-4">
+
+        <nav class="flex flex-col w-full items-center ">
+            <h1 class="text-[32px] font-bold ">
+                Craft Market
+            </h1>
+            <ul class="flex items-center gap-5">
+                <li class="menu-item"><a href="">Accuil</a> </li>
+                <li class="menu-item active"><a href="">Catalogue</a> </li>
+                <li class="menu-item"><a href="">Panier</a> </li>
+                <li class="menu-item"><a href="">Contact</a> </li>
+            </ul>
+
+        </nav>
+        <div class="icons absolute right-8 top-1/2 flex items-center gap-3  text-[20px]">
+            <i class="mx-[5px] fa-regular fa-heart"></i>
+            <i class="mx-[5px] fa-solid fa-magnifying-glass"></i>
+            <a href=""><i class="mx-[5px] fa-solid fa-store"></i></a>
+        </div>
+        
+    </header>
+    <hr class="border-gray-200">
+</body>
+</html>
