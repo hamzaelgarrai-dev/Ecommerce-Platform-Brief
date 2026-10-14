@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css"> 
 </head>
 
-<body>
+<body class="bg-white">
 
-    <section class="flex flex-col space-y-6 mx-auto  max-w-[400px] pt-12 px-2 justify-center  min-h-screen ">
+    <section class="flex flex-col space-y-6 mx-auto  max-w-[400px] pt-12 px-2 justify-center items-center  min-h-screen md:max-w-[780px] md:grid md:grid-cols-2 md:gap-6 md:pt-24">
 
 
 
-        <div class="w-[100%] h-[340px]  grid grid-cols-3 gap-3">
+        <div class="w-[100%] h-[340px]  grid grid-cols-3 gap-3 md:h-[600px] ">
 
             <div class="col-span-3  h-[240px]  "><img src="./productDetails-Images/avatar.svg" alt="product-image"
-                    class="rounded-[15px] h-full w-full object-cover "></div>
+                    class="rounded-[15px] h-full w-full object-cover md:h-[360px] "></div>
 
             <div class=" h-[80px] "><img src="./productDetails-Images/avatar.svg" alt="product-image"
                     class="rounded-[15px] h-full w-full object-cover "></div>
@@ -28,7 +28,7 @@
 
         </div>
 
-        <div class="w-full  flex flex-col space-y-3 ">
+        <div class="w-full  flex flex-col space-y-3 md:h-[600px] ">
 
             <h3 class="font-semibold text-2xl">Product Name</h3>
             <div class="flex w-full space-x-2"><img src="./productDetails-Images/four-star-rating-black-icon.svg"
@@ -40,7 +40,7 @@
             <p class="text-[16px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, labore nisi!
                 Temporibus voluptas, consequuntur atque sunt cupiditate illo. Molestias, numquam.</p>
 
-            <div class="flex flex-col space-y-4 pb-4">
+            <div class="flex flex-col space-y-4 pb-4 md:flex-row md:justify-between md:items-center">
 
                 <div class="space-y-2">
                     <p class="text-[16px]">Color</p>
@@ -74,9 +74,10 @@
         </div>
 
 
-        <div class="space-y-4 flex flex-col pb-8 ">
+        <div class="space-y-4 flex flex-col pb-8 md:grid md:grid-rows-2 gap-2">
 
-            <p class="text-[16px]">Clients Reviews</p>
+            <p class="text-[16px] ">Clients Reviews</p>
+
 
             <div class="flex space-x-8 p-4 border border-gray-600 rounded-[15px]">
 
@@ -110,12 +111,39 @@
 
     </section>
 
-    <footer class=" flex flex-col w-full mx-auto  bg-amber-800 h-64">
+    <footer class="py-4 text-white flex flex-col  w-full mx-auto items-center text-center  bg-amber-800 ">
 
-        <div class="max-w-[400px]">
-            <h3>Craft Market</h3>
+        <div class="max-w-[380px] space-y-4 ">
+            <h3 class="text-2xl ">Craft Market</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum praesentium </p>
         </div>
+
+        <hr class="my-6 border w-[400px] border-gray-300">
+        
+        <div class=" grid grid-cols-2 gap-5 w-full  ">
+
+            <p class=""><a href="">Company</a></p>
+            <p><a href="">Adrees</a></p>
+            <p><a href="">Phone Number</a></p>
+            <p><a href="">Email</a></p>
+
+        </div>
+
+         <hr class="my-6 border w-[400px] border-gray-300">
+
+         <div class="flex max-w-[380px] items-center space-x-8">
+            <div><img src="./productDetails-Images/instagram.svg" alt="instagram" class="w-9"></div>
+            <div><img src="./productDetails-Images/facebook.svg" alt="instagram" class="w-9"></div>
+            <div><img src="./productDetails-Images/linkedin.svg" alt="instagram" class="w-9"></div>
+         </div>
+
+         <hr class="my-6 border w-[400px] border-gray-300">
+
+         <div class="pb-0">
+            <p>@2026 Craft MArket All Rights Reserved </p>
+         </div>
+
+
 
 
     </footer>
