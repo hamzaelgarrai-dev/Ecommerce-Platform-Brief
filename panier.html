@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craft Market - Votre panier</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .quantity-input {
+            width: 35px;
+            text-align: center;
+            outline: none;
+            appearance: textfield;
+            -moz-appearance: textfield;
+        }
+
+        .quantity-input::-webkit-inner-spin-button,
+        .quantity-input::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+<body class="bg-white text-[#34312d]">
+    <!-- HEADER -->
+    <header class="border-b border-[#E9E2DC]">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="flex items-center justify-between gap-6">
+                
+                <nav class="block md:hidden">
+                    <i class="fa-solid fa-bars"></i>
+                </nav>
+
+                <nav class="hidden md:block">
+                    <ul class="flex gap-6 text-sm">
+                        <li><a href="#" class="hover:text-[#9b6546]">Accueil</a></li>
+                        <li><a href="#" class="hover:text-[#9b6546]">Catalogue</a></li>
+                        <li><a href="#" class="hover:text-[#9b6546]">Fiche produit</a></li>
+                    </ul>
+                </nav>
+
+                <div class="text-center">
+                    <a href="#" class="logo block text-2xl font-medium mt-1">
+                        Craft Market
+                    </a>
+                    <p class="text-[6px] tracking-[4px] uppercase text-stone-400">
+                        Les beaux jours, chez soi
+                    </p>
+                </div>
+
+                <nav>
+                    <ul class="flex items-center gap-4 text-sm">
+                        <li class="hidden md:block"><a href="#" aria-label="Rechercher"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li class="hidden md:block"><a href="#" aria-label="Compte"><i class="fa-regular fa-user"></i></a></li>
+                        <li class="hidden md:block"><a href="#">Contact</a></li>
+                        <li>
+                            <a href="#" class=" border-b border-stone-400 pb-1">
+                                <i class="fa-solid fa-bag-shopping"></i>Panier(4)
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+    
+    
+</body>
+</html>
