@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-    <link rel="stylesheet" href="style.css">
 
 <head> 
     <meta charset = UTF-8>
@@ -9,82 +8,25 @@
 
  
     <title>Craft Projects</title>
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
         <link rel="stylesheet" href="style.css">
 
+    
+         <link rel="stylesheet"
+           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-        <style>
-        .marquee {
-            width: 100%;
-            background-color: #a87560;
-            overflow: hidden;
-            color: white;
-            padding: 15px 0;
-        }
-        .marquee-content {
-            display: flex;
-            width: max-content;
-            gap: 40px;
-            white-space: nowrap;
-            animation: defilement 10s linear infinite;
-        }
-        @keyframes defilement {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-30%);
-            }
-        }
-        .menu-item{
-            padding: 10px;
-            list-style: none;
-            position: relative;
-            transition: color 0.3s ease;
-
-        }
-        .menu-item::after{
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 1px;
-        background-color: #a87560;
-        bottom: 0;
-        left: 0;
-        transition: width 0.3s ease;
-        }
-        .menu-item:hover::after,
-        .menu-item.active::after{
-            width: 100%;
-        }
-
-        .active{
-            color: #a87560;
-        }
-
-      
-
-        header i:hover{
-            color: #a87560;
-            font-size: 21px;
-        }
-        h1{
-            font-family: 'Irish Grover', cursive;;
-        }
-        .icons{
-            position: relative;
-            right: 0;
-        }
-    </style>
+    
+           <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap"
+            rel="stylesheet">
         
 
+        
     </head>
-    <body class = "m-0 bg-white text-black">
+       <body class = "m-0 bg-white text-black">
 
           <div class="marquee">
-        <div class="marquee-content">
+            <div class="marquee-content">
             <span>100% fabriqué au Maroc depuis 2026</span>
             <span>Livraison partout</span>
             <span>100% fabriqué au Maroc depuis 2026</span>
@@ -99,14 +41,11 @@
             <span>Livraison partout</span>
         </div>
     </div>
-    <header class="w-full px-4 md:px-10 py-4 border-b border-gray-200">
 
+<header class="w-full px-4 md:px-10 py-4 border-b border-gray-200">
         <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 items-center gap-y-3">
-            
-            
-            <div class="hidden md:block"></div>
 
-            <h1 class="text-2xl md:text-[32px] font-bold text-gray-900 justify-self-start md:justify-self-center">
+         <h1 class="text-2xl md:text-[32px] font-bold text-gray-900 justify-self-start md:justify-self-center">
                 Craft Market
             </h1>
 
@@ -131,16 +70,19 @@
 
         </div>
     </header>
-    <hr class="border-gray-200">
-        
-        <div class = "hero">
-    
+    <main>
+
+        <section class="hero">
          <img src="homePage/Stunning Moroccan Living Room with Colorful Handmade Pillows _ Cozy Boho Decor Inspiration.jpg" class = "hero-imag block w-full h-72 object-cover" >
-         <div id="box1" class="box bg-stone-100 text-amber-950 p-8 text-center"></div>
-         <div class = "hero">
-             <h1  class="text-3xl font-bold mb-4"
-                <i>Morrocan artizana</i>
-            </h1>
+         <div class="hero-box w-full max-w-2xl rounded-xl px-6 py-10 sm:px-10">
+         <p class="mb-3 font-semibold uppercase tracking-widest text-amber-800">
+            Moroccan Handmade Crafts
+          </p>
+
+            <h2 class="mb-4 text-3xl font-bold">
+                    <i>Moroccan Artizana</i>
+                </h2>
+
               <p class = "text-lg mb-6">
               Morrocan crafts the contry's rich culture and traditions
             </p>
@@ -153,10 +95,114 @@
            </div>
           <div class="brown-line"></div>
        <div class="beige-line"></div>
-         
-            </body>
-            </html>
+       <section class="mx-auto max-w-7xl px-5 py-12">
 
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+
+              
+                <div class="craft-box craft-box-one flex min-h-[280px] items-center justify-center rounded-xl p-6 text-center">
+
+                    <div class="craft-box-text w-full max-w-sm rounded-lg p-6">
+
+                        <h2 class="mb-4 text-2xl font-bold">
+                            Moroccan Heritage
+                        </h2>
+
+                        <p class="mb-5">
+                            Discover the beauty of traditional Moroccan craftsmanship.
+                        </p>
+
+                        <a href="categories.html"
+                           class="inline-block rounded-md bg-[#a87560] px-6 py-3 font-semibold text-white hover:bg-[#895b48]">
+                            Explore Categories
+                        </a>
+
+                    </div>
+                </div>
+
+
+               
+                <div class="craft-box craft-box-two flex min-h-[280px] items-center justify-center rounded-xl p-6 text-center">
+
+                    <div class="craft-box-text w-full max-w-sm rounded-lg p-6">
+
+                        <h2 class="mb-4 text-2xl font-bold">
+                            Handmade With Love
+                        </h2>
+
+                        <p class="mb-5">
+                            Explore unique creations inspired by Moroccan traditions.
+                        </p>
+
+                        <a href="produits.html"
+                           class="inline-block rounded-md bg-[#a87560] px-6 py-3 font-semibold text-white hover:bg-[#895b48]">
+                            Discover Products
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- FIVE CIRCLES UNDER THE BOXES -->
+        <section class="px-5 pb-16 pt-4">
+
+            <h2 class="mb-8 text-center text-2xl font-bold">
+                Explore Our Crafts
+            </h2>
+
+            <div class="flex flex-wrap items-center justify-center gap-6">
+
+                <a href="categories.html"
+                   class="craft-circle bg-[#f1dfce]">
+                    <span>Pottery</span>
+                </a>
+
+                <a href="categories.html"
+                   class="craft-circle bg-[#e8c6b5]">
+                    <span>Carpets</span>
+                </a>
+
+                <a href="categories.html"
+                   class="craft-circle bg-[#eadfba]">
+                    <span>Lanterns</span>
+                </a>
+
+                <a href="categories.html"
+                   class="craft-circle bg-[#d9c7b5]">
+                    <span>Leather</span>
+                </a>
+
+                <a href="categories.html"
+                   class="craft-circle bg-[#e8d9ce]">
+                    <span>Jewellery</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+   
+    <footer class="bg-[#a87560] px-5 py-6 text-center text-white">
+
+        <p class="font-semibold">Craft Market</p>
+
+        <p class="mt-2 text-sm">
+            100% Moroccan handmade crafts.
+        </p>
+
+    </footer>
+
+</body>
+</html>
+
+         
+        
            
 
       
@@ -174,4 +220,3 @@
 
    
 
- </body>

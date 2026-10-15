@@ -1,57 +1,161 @@
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+
+
+.marquee {
+    width: 100%;
+    background-color: #a87560;
+    overflow: hidden;
+    color: white;
+    padding: 15px 0;
 }
 
-.hero-image {
-
-    width: %;300px
-    height: 400px;
-    object-fit: cover;
-    display:block;
-    margin : 0 ;
-    padding : 0 ;
+.marquee-content {
+    display: flex;
+    width: max-content;
+    gap: 40px;
+    white-space: nowrap;
+    animation: defilement 10s linear infinite;
 }
-.box {
-        border : 5px solid ;
-        font-size: 5em ;
-        width:250px;
-        height:250px;
-        
 
-    }
-    .box {
-        border : 5px solid ;
-        font-size: 5em ;
-        width:250px;
-        height:250px;
-        
-
+@keyframes defilement {
+    from {
+        transform: translateX(0);
     }
 
-
-
-
-
-.brown-line {
-    width: 100%;
-    height: 40px;
-    background-color: rgba(95, 64, 31, 0.941);
-}
-
-.beige-line {
-    width: 100%;
-    height: 16px;
-    background-color: rgba(192, 131, 66, 0.549);
+    to {
+        transform: translateX(-30%);
+    }
 }
 
 
 
 
+.menu-item {
+    padding: 10px;
+    list-style: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.menu-item::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #a87560;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.menu-item:hover::after,
+.menu-item.active::after {
+    width: 100%;
+}
+
+.active {
+    color: #a87560;
+}
+
+header i {
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+header i:hover {
+    color: #a87560;
+    font-size: 21px;
+}
 
 
 
 
+h1,
+h2 {
+    font-family: 'Irish Grover', cursive;
+}
 
-    
+
+.hero {
+    width: 100%;
+    padding-bottom: 35px;
+}
+
+.hero-box {
+    background-color: #fffaf0;
+    border: 1px solid #a87560;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+.craft-box {
+    background-image: url("homePage/Stunning Moroccan Living Room with Colorful Handmade Pillows _ Cozy Boho Decor Inspiration.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #a87560;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+.craft-box-one {
+    background-position: left center;
+}
+
+*/
+.craft-box-two {
+    background-position: right center;
+}
+
+
+
+
+.craft-box-text {
+    background-color: rgba(255, 250, 240, 0.90);
+    border: 1px solid #a87560;
+    color: #3f3028;
+}
+
+
+
+
+.craft-circle {
+    width: 115px;
+    height: 115px;
+    border: 2px solid #a87560;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: #4a3026;
+    text-decoration: none;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.craft-circle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* MOBILE SCREEN */
+
+@media (max-width: 640px) {
+    .craft-circle {
+        width: 95px;
+        height: 95px;
+        font-size: 13px;
+    }
+
+    .craft-box {
+        min-height: 250px;
+    }
+}
