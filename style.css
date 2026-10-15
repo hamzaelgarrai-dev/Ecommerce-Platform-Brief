@@ -14,22 +14,39 @@ body {
 }
 .beige-line {
     width: 100%;
-    height: 10px;
+    height: 16px;
     background-color: rgba(206, 152, 94, 0.737);
 }
 .top-image {
-    width: 100%;
+
+    width: %;300px
     height: 400px;
     object-fit: cover;
     display:block;
+    margin : 0 ;
+    padding : 0 ;
 }
+.box {
+    border : 0px  ;
+    font-size : 5em;
+    width : 10px;
+    height:10px;
+
+
+}
+#box1{
+    background-color : rgba(118, 81, 7, 0.685);                          
+    margin-left: 5px;
+}
+
+
 
 
 
 .brown-line {
     width: 100%;
     height: 40px;
-    background-color: rgba(81, 45, 7, 0.737);
+    background-color: rgba(81, 45, 7, 0.659);
 }
 
 
@@ -37,10 +54,21 @@ body {
 
 
 
-.top {
-    text-align: left;
-    padding: 5px;
+
+.hero {
+    position : relative ;
+    text-align: top;
+    padding: 0px;
     color: rgb(30, 28, 28);
+}
+.hero-text {
+     position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: rgb(34, 32, 32);
+    text-align: center;
+    width: 85%;
 }
 
 
