@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <link rel="stylesheet" href="style.css">
+
+<head> 
+    <meta charset = UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+    <title>Craft Projects</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <link rel="stylesheet" href="style.css">
+
+
+        <style>
+        .marquee {
+            width: 100%;
+            background-color: #a87560;
+            overflow: hidden;
+            color: white;
+            padding: 15px 0;
+        }
+        .marquee-content {
+            display: flex;
+            width: max-content;
+            gap: 40px;
+            white-space: nowrap;
+            animation: defilement 10s linear infinite;
+        }
+        @keyframes defilement {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-30%);
+            }
+        }
+        .menu-item{
+            padding: 10px;
+            list-style: none;
+            position: relative;
+            transition: color 0.3s ease;
+
+        }
+        .menu-item::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #a87560;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease;
+        }
+        .menu-item:hover::after,
+        .menu-item.active::after{
+            width: 100%;
+        }
+
+        .active{
+            color: #a87560;
+        }
+
+      
+
+        header i:hover{
+            color: #a87560;
+            font-size: 21px;
+        }
+        h1{
+            font-family: 'Irish Grover', cursive;;
+        }
+        .icons{
+            position: relative;
+            right: 0;
+        }
+    </style>
+        
+
+    </head>
+    <body class = "m-0 bg-white text-black">
+
+          <div class="marquee">
+        <div class="marquee-content">
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+        </div>
+    </div>
+    <header class="w-full px-4 md:px-10 py-4 border-b border-gray-200">
+
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 items-center gap-y-3">
+            
+            
+            <div class="hidden md:block"></div>
+
+            <h1 class="text-2xl md:text-[32px] font-bold text-gray-900 justify-self-start md:justify-self-center">
+                Craft Market
+            </h1>
+
+            <div class="flex items-center gap-3 text-xl md:text-[20px] justify-self-end">
+                <i class="fa-regular fa-heart cursor-pointer hover:text-[#a87560]"></i>
+                <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-[#a87560]"></i>
+                <a href="#"><i class="fa-solid fa-store hover:text-[#a87560]"></i></a>
+                
+                <button class="md:hidden ml-1 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+            
+            <nav class="hidden md:flex justify-self-center md:col-span-3">
+                <ul class="flex items-center gap-6 text-base">
+                    <li class="menu-item hover:text-[#a87560]"><a href="#">Accueil</a></li>
+                    <li class="menu-item active hover:text-[#a87560] font-semibold border-b-2 border-[#a87560] pb-1"><a href="#">Catalogue</a></li>
+                    <li class="menu-item hover:text-[#a87560]"><a href="#">Panier</a></li>
+                    <li class="menu-item hover:text-[#a87560]"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <hr class="border-gray-200">
+        
+        <div class = "hero">
+    
+         <img src="homePage/Stunning Moroccan Living Room with Colorful Handmade Pillows _ Cozy Boho Decor Inspiration.jpg" class = "hero-imag block w-full h-72 object-cover" >
+         <div id="box1" class="box bg-stone-100 text-amber-950 p-8 text-center"></div>
+         <div class = "hero">
+             <h1  class="text-3xl font-bold mb-4"
+                <i>Morrocan artizana</i>
+            </h1>
+              <p class = "text-lg mb-6">
+              Morrocan crafts the contry's rich culture and traditions
+            </p>
+                <ul clss ="list-disc list-inside space-y-3 text-left max-w-xl mx-auto"> 
+                  <li>100% morrocan materials and products</li></h>
+                   <li>high and luxury  products and crafts in our shop</li>
+                   <li>Shop authentic products</li>
+                 </ul>
+             </div>
+           </div>
+          <div class="brown-line"></div>
+       <div class="beige-line"></div>
+         
+            </body>
+            </html>
+
+           
+
+      
+       
+
+       
+        
+        
+
+
+            
+             
+       
+           
+
+   
+
+ </body>
