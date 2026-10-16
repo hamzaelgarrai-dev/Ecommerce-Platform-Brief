@@ -1022,34 +1022,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:max-w-\[\] {
-    max-width: ;
-  }
-
-  .lg\:max-w-\[1\] {
-    max-width: 1;
-  }
-
-  .lg\:max-w-\[1340px\] {
-    max-width: 1340px;
-  }
-
-  .lg\:max-w-\[1240px\] {
-    max-width: 1240px;
-  }
-
-  .lg\:max-w-\[140px\] {
-    max-width: 140px;
-  }
-
-  .lg\:max-w-\[1140px\] {
-    max-width: 1140px;
-  }
-
   .lg\:max-w-\[1200px\] {
     max-width: 1200px;
   }
