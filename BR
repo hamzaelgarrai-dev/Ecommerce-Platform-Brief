@@ -1,0 +1,14 @@
+<a href = "Acceuil.html">
+             <text x="838" y = "41" font-family = Arial font-size = "16" fill = "#2f5bea">Acceuill</text>
+             </a>
+        
+             <a href = "Produits.html">
+             <text x="838" y = "41" font-family = Arial font-size = "16" fill = "#2f5bea">Catégories</text>
+             </a>
+             <a href = "Catalogue">
+             <text x="838" y = "41" font-family = Arial font-size = "16" fill = "#2f5bea">Produits</text>
+             </a>
+             <a href = "Catégories">
+             <text x="838" y = "41" font-family = Arial font-size = "16" fill = "#2f5bea">Catalogue</text>
+             </a>
+            </text>
