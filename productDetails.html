@@ -15,19 +15,27 @@
 
 
 
-        <div class="w-full h-[340px]  grid  grid-cols-3  gap-3 md:h-full  ">
+        <div class="w-full h-[340px]  grid  grid-cols-3  gap-3 md:h-full lg:flex  ">
 
-            <div class="col-span-3  h-[240px] md:h-auto  "><img src="./productDetails-Images/avatar.svg"
-                    alt="product-image" class="rounded-[15px] h-full w-full object-cover md:h-full "></div>
 
+            <div class="col-span-3  h-[240px] md:h-auto lg:h-full  "><img src="./productDetails-Images/avatar.svg"
+                    alt="product-image" class="rounded-[15px] h-full w-full object-cover md:h-full ">
+            </div>
+
+            
+
+            
+            <div class=" h-[80px]  "><img src="./productDetails-Images/avatar.svg" alt="product-image"
+                    class="rounded-[15px] h-full w-full object-cover "></div>
+            <div class="h-[80px] "><img src="./productDetails-Images/avatar.svg" alt="product-image"
+                    class="rounded-[15px] h-full w-full object-cover "></div>
             <div class=" h-[80px] "><img src="./productDetails-Images/avatar.svg" alt="product-image"
                     class="rounded-[15px] h-full w-full object-cover "></div>
-            <div class="h-[80px]"><img src="./productDetails-Images/avatar.svg" alt="product-image"
-                    class="rounded-[15px] h-full w-full object-cover "></div>
-            <div class=" h-[80px]"><img src="./productDetails-Images/avatar.svg" alt="product-image"
-                    class="rounded-[15px] h-full w-full object-cover "></div>
 
+            
         </div>
+
+        
 
         <div class="w-full  flex flex-col space-y-3   ">
 
@@ -112,7 +120,7 @@
 
     </section>
 
-    <footer class="py-4 text-white flex flex-col  w-full mx-auto items-center text-center  bg-amber-800 ">
+    <footer class="py-4 text-white flex flex-col  w-full mx-auto items-center text-center  bg-[#a87560] ">
 
         <div class="md:hidden">
 
@@ -125,10 +133,10 @@
 
             <div class=" grid grid-cols-2 gap-5 w-full  ">
 
-                <p class=""><a href="">Company</a></p>
-                <p><a href="">Adrees</a></p>
-                <p><a href="">Phone Number</a></p>
-                <p><a href="">Email</a></p>
+                <p class="text-start px-2"><a href="">Company</a></p>
+                <p><a href="">140, avenue Hassan II, Safi</a></p>
+                <p class="text-start px-2"><a href="">+212 649-537-454</a></p>
+                <p><a href="">CraftMarcket@gmail.com</a></p>
 
             </div>
 
@@ -150,22 +158,22 @@
 
 
 
-        <div class="hidden md:block">
-            <div class="grid grid-cols-4 gap-6 px-6 py-12 text-start">
+        <div class="hidden md:block lg:max-w-[1360px]">
+            <div class="grid grid-cols-4 gap-6 px-6 py-12 text-start lg:gap-8  lg:w-full ">
                 <div>
-                    <h2 class="mb-5 text-3xl "> Craft Market </h2>
-                    <p class="max-w-[340px] text-[16px] leading-[1.9rem]"> Lorem ipsum dolor sit amet consectetur
+                    <h2 class="mb-5 text-4xl  "> Craft Market </h2>
+                    <p class="max-w-[340px] text-lg leading-[1.9rem] "> Lorem ipsum dolor sit amet consectetur
                         adipisicing elit. Earum praesentium doloribus, nam alias, aspernatur enim </p>
                 </div> 
-                <div class="pl-24">
+                <div class="pl-24 lg:pl-44">
                     <h3 class="mb-5 text-3xl">Links</h3>
                     <ul class="space-y-3 text-lg">
-                        <li><a href="#" class="hover:underline">Home</a></li>
-                        <li><a href="#" class="hover:underline">Products</a></li>
-                        <li><a href="#" class="hover:underline">Contact</a></li>
+                        <li><a href="./homePage.html" class="hover:underline">Home</a></li>
+                        <li><a href="/catalogue.html" class="hover:underline">Products</a></li>
+                        <li><a href="./contact.html" class="hover:underline">Contact</a></li>
                     </ul>
                 </div> 
-                <div>
+                <div class="lg:pl-14">
                     <h3 class="mb-5 text-3xl">Contact US</h3>
                     <ul class="space-y-3 text-lg">
                         <li><a href="#" >140, avenue Hassan II, Safi</a></li>
@@ -173,7 +181,7 @@
                         <li><a href="#" >CraftMarcket@gmail.com</a></li>
                     </ul>
                 </div> 
-                <div>
+                <div class="lg:pl-14">
                     <h3 class="mb-5 text-3xl">Social</h3>
                     <ul class="space-y-3 text-lg">
                         <li><a href="#" class="hover:underline">Linkedin</a></li>
