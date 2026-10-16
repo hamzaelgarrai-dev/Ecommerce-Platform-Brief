@@ -94,288 +94,422 @@
             <span>Livraison partout</span>
         </div>
     </div>
+    
     <header class="w-full px-4 md:px-10 py-4 border-b border-gray-200">
 
         <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 items-center gap-y-3">
-            
-            
             <div class="hidden md:block"></div>
-
             <h1 class="text-2xl md:text-[32px] font-bold text-gray-900 justify-self-start md:justify-self-center">
                 Craft Market
             </h1>
-
+            <!-- Checkbox bach n7ello menu bla JavaScript -->
+            <input type="checkbox" id="menu-toggle" class="peer/menu hidden">
+            <!-- Icons -->
             <div class="flex items-center gap-3 text-xl md:text-[20px] justify-self-end">
                 <i class="fa-regular fa-heart cursor-pointer hover:text-[#a87560]"></i>
                 <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-[#a87560]"></i>
-                <a href="#"><i class="fa-solid fa-store hover:text-[#a87560]"></i></a>
-                
-                <button class="md:hidden ml-1 text-2xl focus:outline-none">
+                <a href="#"><i class="fa-solid fa-store hover:text-[#a87560] hover:scale-[0.8]"></i></a>
+                <!-- Burger f mobile -->
+                <label for="menu-toggle" class="md:hidden ml-1 text-2xl cursor-pointer">
                     <i class="fa-solid fa-bars-staggered"></i>
-                </button>
+                </label>
+
             </div>
-            
-            <nav class="hidden md:flex justify-self-center md:col-span-3">
-                <ul class="flex items-center gap-6 text-base">
-                    <li class="menu-item hover:text-[#a87560]"><a href="#">Accueil</a></li>
-                    <li class="menu-item active hover:text-[#a87560] font-semibold border-[#a87560] pb-1"><a href="#">Catalogue</a></li>
-                    <li class="menu-item hover:text-[#a87560]"><a href="#">Panier</a></li>
-                    <li class="menu-item hover:text-[#a87560]"><a href="#">Contact</a></li>
+
+            <!-- Navigation -->
+            <nav class="hidden peer-checked/menu:flex flex-col absolute top-[75px] left-0 w-full bg-white shadow-md z-50 p-5
+                        md:static md:flex md:flex-row md:justify-self-center md:col-span-3 md:w-auto md:p-0 md:shadow-none">
+
+                <ul class="flex flex-col md:flex-row items-center gap-5 md:gap-6 text-base">
+
+                    <li class="menu-item hover:text-[#a87560]"><a href="homePage.html">Accueil</a></li>
+                    <li class="menu-item active hover:text-[#a87560] font-semibold border-[#a87560] pb-1"><a href="catalogue.html">Catalogue</a></li>
+                    <li class="menu-item hover:text-[#a87560]"><a href="panier.html">Panier</a></li>
+                    <li class="menu-item hover:text-[#a87560]"><a href="contact.html">Contact</a></li>
+
                 </ul>
+
             </nav>
 
         </div>
+
     </header>
+
     <hr class="border-gray-200">
-   
-<article>
-    <div class="produits grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full my-10 mx-auto px-4 max-w-7xl">
+   <main>
+    
+    <article class="w-full max-w-sm md:max-w-[650px]  mx-auto px-6 py-8 bg-white">
 
-        <!-- Produit 1 -->
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
+        <h1 class="text-2xl md:text-[27px] md:px-10 font-bold leading-tight mb-4">
+            L’artisanat marocain, près de chez vous
+        </h1>
 
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
+        <p class="text-base text-gray-600  md:px-8 leading-snug mb-4">
+            Découvrez des pièces uniques qui allient tradition, créativité et authenticité.
+        </p>
 
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
+        <!-- Search -->
+        <div class="flex items-center gap-3 border border-[#a87860] rounded-full px-3 py-2 mb-3">
+            <i class="fa-solid fa-magnifying-glass text-sm"></i>
 
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
+            <input
+                type="search"
+                placeholder="Rechercher un produit..."
+                class="w-full min-w-0 outline-none text-sm bg-transparent"
+            >
 
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
-
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
-
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
-
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
-
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
-
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
-
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
-
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
-
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
-
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
-
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
-
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
-
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
-
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
-
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
-
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
-
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
-
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
-
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
-
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
-
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
-
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
-
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
-
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
-
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
-
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
-
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
-
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
-
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
-
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
-        </div>
-        <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
-            <img src="catalogImgs/Lartisanat.jpg"
-                alt="Produit 1"
-                class="w-full h-60 object-cover rounded-md">
-
-            <h3 class="text-xl font-bold my-3">Produit 1</h3>
-            <p class="text-lg text-slate-500">100 $</p>
-
-            <div class="stars flex justify-center gap-1 my-3">
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star"></i>
-                <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
-            </div>
-
-            <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
-                Ajouter au panier
-            </button>
+            <i class="fa-solid fa-xmark text-sm cursor-pointer"></i>
         </div>
 
+        <!-- Catégories -->
+        <div class="grid grid-cols-2  md:grid-cols-4 md:w-full md:h-8 gap-2">
+
+            <button class="border border-gray-300 rounded-full py-1 text-sm text-[#a78c85] whitespace-nowrap">
+                Maroquinerie
+            </button>
+
+            <button class="border border-gray-300 rounded-full py-1 text-sm text-[#a78c85] whitespace-nowrap">
+                Artisanat métallique
+            </button>
+
+            <button class="border border-gray-300 rounded-full py-1 text-sm text-[#a78c85] whitespace-nowrap">
+                Tapis et tissage
+            </button>
+
+            <button class="border border-gray-300 rounded-full py-1 text-sm text-[#a78c85] whitespace-nowrap">
+                Bois et décoration
+            </button>
+
+        </div>
+
+    </article>
+
+    <article>
+        <div class="produits grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full my-10 mx-auto px-4 max-w-7xl">
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/vaseEnCeramique.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Vase en céramique</h3>
+                <p class="text-lg text-slate-500">120 DH</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/lampeArtisanale.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Lampe artisanale</h3>
+                <p class="text-lg text-slate-500">200 DH</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/tapisBerbere.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Tapis berbère</h3>
+                <p class="text-lg text-slate-500">1000 DH</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/sacMina.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Sac en raphia</h3>
+                <p class="text-lg text-slate-500">300 DH</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/tajine.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Tagin</h3>
+                <p class="text-lg text-slate-500">150 DH</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/miroir.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Miroir en bois sculpté</h3>
+                <p class="text-lg text-slate-500">600 DH</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/plateauMarocain.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Plateau marocain en cuivre</h3>
+                <p class="text-lg text-slate-500">999 DH</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/bougieArtisanale.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Bougie artisanale</h3>
+                <p class="text-lg text-slate-500">220 DH</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/Lartisanat.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Produit 1</h3>
+                <p class="text-lg text-slate-500">100 $</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/Lartisanat.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Produit 1</h3>
+                <p class="text-lg text-slate-500">100 $</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/Lartisanat.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Produit 1</h3>
+                <p class="text-lg text-slate-500">100 $</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/Lartisanat.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Produit 1</h3>
+                <p class="text-lg text-slate-500">100 $</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/Lartisanat.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Produit 1</h3>
+                <p class="text-lg text-slate-500">100 $</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/Lartisanat.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Produit 1</h3>
+                <p class="text-lg text-slate-500">100 $</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
+            <div class="produit w-full border border-gray-200 rounded-lg p-4 text-center shadow-sm hover:shadow-lg transition duration-300">
+                <a href="productDetails.html">
+                    <img src="catalogImgs/Lartisanat.jpg"
+                    alt="Produit 1"
+                    class="w-full h-60 object-cover rounded-md">
+
+                <h3 class="text-xl font-bold my-3">Produit 1</h3>
+                <p class="text-lg text-slate-500">100 $</p>
+
+                <div class="stars flex justify-center gap-1 my-3">
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star"></i>
+                    <i class="text-amber-400 fa-solid fa-star-half-stroke"></i>
+                </div>
+
+                <button class="border border-[#a87560] text-[#a87560] w-full p-2 rounded-md hover:bg-[#a87560] hover:text-white transition duration-300">
+                    Ajouter au panier
+                </button>
+                </a>
+            </div>
 
 
-    </div>
-</article>
+
+        </div>
+    </article>
+   </main>
 </body>
 </html>
