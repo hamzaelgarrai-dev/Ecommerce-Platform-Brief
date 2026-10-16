@@ -80,10 +80,10 @@
             <span class="text-stone-600">Votre panier</span>
         </p>
     </div>
-    <!-- MAIN -->
+   <!-- MAIN -->
     <main class="max-w-7xl mx-auto px-6 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16">
-             <!-- PANIER -->
+       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16">
+            <!-- PANIER -->
              <section class="lg:col-span-2">
                 <div class="mb-10">
                     <h1 class="text-4xl md:text-5xl font-normal">
@@ -102,6 +102,99 @@
                     <span class="text-center">Quantité</span>
                     <span class="text-right">Total</span>
                 </div>
+
+                <!-- PRODUIT 1 -->
+                <article class="grid grid-cols-[90px_1fr] sm:grid-cols-[100px_1fr_110px_75px] gap-4 items-center py-5 border-b border-[#E9E2DC]">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=300"
+                        alt="Tasse en céramique"
+                        class="w-full h-28 object-cover bg-stone-100"
+                    >
+
+                    <div>
+                        <h3 class="text-lg leading-snug">Tasse en grès façonnée à la main</h3>
+                        <p class="text-xs text-stone-400 mt-2">Grès · Collection Terre</p>
+                        <p class="text-sm mt-2">24,00 € / pièce</p>
+                        <button class="text-xs text-stone-400 underline mt-2 hover:text-red-600">
+                            Retirer
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-center border border-stone-200 h-9">
+                        <button class="px-2 hover:text-[#9b6546]">−</button>
+                        <input id="q1" class="quantity-input text-sm" type="number" value="2" min="1">
+                        <button class="px-2 hover:text-[#9b6546]">+</button>
+                    </div>
+
+                    <strong id="total1" class="text-sm text-right font-medium">48,00 €</strong>
+                </article>
+
+                <!-- PRODUIT 2 -->
+                <article class="grid grid-cols-[90px_1fr] sm:grid-cols-[100px_1fr_110px_75px] gap-4 items-center py-5 border-b border-[#E9E2DC]">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600369671236-e74521d4b6ad?w=300"
+                        alt="Plaid tissé"
+                        class="w-full h-28 object-cover bg-stone-100"
+                    >
+
+                    <div>
+                        <h3 class="text-lg leading-snug">Plaid tissé à la main</h3>
+                        <p class="text-xs text-stone-400 mt-2">Coton · 130 × 170 cm</p>
+                        <p class="text-sm mt-2">69,00 € / pièce</p>
+                        <button class="text-xs text-stone-400 underline mt-2 hover:text-red-600">
+                            Retirer
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-center border border-stone-200 h-9">
+                        <button class="px-2 hover:text-[#9b6546]">−</button>
+                        <input id="q2" class="quantity-input text-sm" type="number" value="1" min="1">
+                        <button class="px-2 hover:text-[#9b6546]">+</button>
+                    </div>
+
+                    <strong id="total2" class="text-sm text-right font-medium">69,00 €</strong>
+                </article>
+
+                <!-- PRODUIT 3 -->
+                <article class="grid grid-cols-[90px_1fr] sm:grid-cols-[100px_1fr_110px_75px] gap-4 items-center py-5 border-b border-[#E9E2DC]">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=300"
+                        alt="Bougie artisanale"
+                        class="w-full h-28 object-cover bg-stone-100"
+                    >
+
+                    <div>
+                        <h3 class="text-lg leading-snug">Bougie artisanale Santal</h3>
+                        <p class="text-xs text-stone-400 mt-2">Cire végétale · 220 g</p>
+                        <p class="text-sm mt-2">32,00 € / pièce</p>
+                        <button class="text-xs text-stone-400 underline mt-2 hover:text-red-600">
+                            Retirer
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-center border border-stone-200 h-9">
+                        <button  class="px-2 hover:text-[#9b6546]">−</button>
+                        <input id="q3" class="quantity-input text-sm" type="number" value="1" min="1">
+                        <button class="px-2 hover:text-[#9b6546]">+</button>
+                    </div>
+
+                    <strong id="total3" class="text-sm text-right font-medium">32,00 €</strong>
+                </article>
+
+                <!-- SOUS TOTAL -->
+                <div class="flex items-center justify-between py-6">
+                    <span class="text-sm font-medium">Sous-total</span>
+                    <strong id="sousTotal" class="text-lg font-medium">149,00 €</strong>
+                </div>
+
+                <a href="#" class="inline-flex items-center gap-2 text-sm text-stone-500 hover:text-[#9b6546] underline">
+                    <span><i class="fa-solid fa-arrow-left"></i></span> Continuer mes achats
+                </a>
+
+                
              </section>
 
              <!-- COMMANDE -->
