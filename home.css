@@ -1,4 +1,6 @@
 
+/* SCROLLING ANNOUNCEMENT BAR */
+
 .marquee {
     width: 100%;
     background-color: #a87560;
@@ -26,13 +28,17 @@
 }
 
 
-
+/* NAVIGATION MENU */
 
 .menu-item {
     padding: 10px;
     list-style: none;
     position: relative;
     transition: color 0.3s ease;
+}
+
+.menu-item a {
+    text-decoration: none;
 }
 
 .menu-item::after {
@@ -65,7 +71,16 @@ header i:hover {
 }
 
 
+/* KEYBOARD ACCESSIBILITY */
 
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #70442f;
+    outline-offset: 4px;
+}
+
+
+/* HEADINGS */
 
 h1,
 h2 {
@@ -73,9 +88,18 @@ h2 {
 }
 
 
+/* ORIGINAL HERO SECTION */
+
 .hero {
     width: 100%;
     padding-bottom: 35px;
+}
+
+.hero-imag {
+    display: block;
+    width: 100%;
+    height: 288px;
+    object-fit: cover;
 }
 
 .hero-box {
@@ -85,7 +109,22 @@ h2 {
 }
 
 
+/* DECORATIVE BROWN AND BEIGE LINES */
 
+.brown-line {
+    width: 100%;
+    height: 5px;
+    background-color: #a87560;
+}
+
+.beige-line {
+    width: 100%;
+    height: 3px;
+    background-color: #f1dfce;
+}
+
+
+/* TWO BOXES WITH BACKGROUND IMAGES */
 
 .craft-box {
     background-image: url("homePage/Stunning Moroccan Living Room with Colorful Handmade Pillows _ Cozy Boho Decor Inspiration.jpg");
@@ -96,4 +135,149 @@ h2 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
+/* Keep the first image positioned on the left */
 
+.craft-box-one {
+    background-position: left center;
+}
+
+/* Keep the second image positioned on the right */
+
+.craft-box-two {
+    background-position: right center;
+}
+
+
+/* TEXT INSIDE EACH BOX */
+
+.craft-box-text {
+    background-color: rgba(255, 250, 240, 0.90);
+    border: 1px solid #a87560;
+    color: #3f3028;
+}
+
+
+/* FIVE CIRCLES */
+
+.craft-circle {
+    width: 115px;
+    height: 115px;
+    border: 2px solid #a87560;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: #4a3026;
+    text-decoration: none;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.craft-circle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* RESPONSIVE IMAGES */
+
+img {
+    max-width: 100%;
+}
+
+
+/* MOBILE SCREEN */
+
+@media (max-width: 640px) {
+
+    .craft-circle {
+        width: 95px;
+        height: 95px;
+        font-size: 13px;
+    }
+
+    .craft-box {
+        min-height: 250px;
+    }
+
+    .hero-imag {
+        height: 220px;
+    }
+
+    .hero-box {
+        padding: 24px 16px;
+    }
+
+    .marquee {
+        padding: 12px 0;
+    }
+
+    .marquee-content {
+        gap: 24px;
+        animation-duration: 15s;
+    }
+
+    .menu-item {
+        padding: 6px;
+    }
+}
+
+
+/* TABLET SCREEN */
+
+@media (min-width: 641px) and (max-width: 1023px) {
+
+    .craft-circle {
+        width: 105px;
+        height: 105px;
+    }
+
+    .hero-imag {
+        height: 280px;
+    }
+
+    .craft-box {
+        min-height: 280px;
+    }
+}
+
+
+/* DESKTOP SCREEN */
+
+@media (min-width: 1024px) {
+
+    .hero-imag {
+        height: 380px;
+    }
+
+    .craft-box {
+        min-height: 320px;
+    }
+}
+
+
+/* REDUCE ANIMATION FOR USERS WHO PREFER LESS MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .marquee-content {
+        animation: none;
+    }
+
+    .menu-item,
+    .menu-item::after,
+    header i,
+    .craft-circle {
+        transition: none;
+    }
+
+    .craft-circle:hover {
+        transform: none;
+    }
+}

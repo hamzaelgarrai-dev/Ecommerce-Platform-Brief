@@ -2,29 +2,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head> 
-    <meta charset = UTF-8>
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- 
     <title>Craft Projects</title>
-       <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-        <link rel="homesheet" href="home.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    
-         <link rel="homesheet"
-           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
 
-    
-           <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap"
-            rel="homesheet">
-        
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-        
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap"
+        rel="stylesheet">
 </head>
-<body class = "m-0 bg-white text-black">
-     <div class="marquee">
+
+<body class="m-0 bg-white text-black">
+
+    
+    <div class="marquee" aria-label="Informations sur la boutique">
         <div class="marquee-content">
             <span>100% fabriqué au Maroc depuis 2026</span>
             <span>Livraison partout</span>
@@ -40,11 +38,12 @@
             <span>Livraison partout</span>
         </div>
     </div>
+
+    
     <header class="w-full px-4 md:px-10 py-4 border-b border-gray-200">
 
         <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 items-center gap-y-3">
-            
-            
+
             <div class="hidden md:block"></div>
 
             <h1 class="text-2xl md:text-[32px] font-bold text-gray-900 justify-self-start md:justify-self-center">
@@ -52,57 +51,117 @@
             </h1>
 
             <div class="flex items-center gap-3 text-xl md:text-[20px] justify-self-end">
-                <i class="fa-regular fa-heart cursor-pointer hover:text-[#a87560]"></i>
-                <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-[#a87560]"></i>
-                <a href="#"><i class="fa-solid fa-store hover:text-[#a87560]"></i></a>
-                
-                <button class="md:hidden ml-1 text-2xl focus:outline-none">
-                    <i class="fa-solid fa-bars-staggered"></i>
+
+                <a href="#" aria-label="Favoris">
+                    <i class="fa-regular fa-heart hover:text-[#a87560]"
+                        aria-hidden="true"></i>
+                </a>
+
+                <a href="produits.html" aria-label="Rechercher des produits">
+                    <i class="fa-solid fa-magnifying-glass hover:text-[#a87560]"
+                        aria-hidden="true"></i>
+                </a>
+
+                <a href="panier.html" aria-label="Voir le panier, 0 article">
+                    <i class="fa-solid fa-store hover:text-[#a87560]"
+                        aria-hidden="true"></i>
+                    <span class="text-sm">0</span>
+                </a>
+
+                <button type="button"
+                    class="md:hidden ml-1 text-2xl focus-visible:outline-2 focus-visible:outline-offset-4"
+                    aria-label="Menu de navigation">
+                    <i class="fa-solid fa-bars-staggered" aria-hidden="true"></i>
                 </button>
+
             </div>
-            
-            <nav class="hidden md:flex justify-self-center md:col-span-3">
-                <ul class="flex items-center gap-6 text-base">
-                    <li class="menu-item hover:text-[#a87560]"><a href="#">Accueil</a></li>
-                    <li class="menu-item active hover:text-[#a87560] font-semibold border-b-2 border-[#a87560] pb-1"><a href="#">Catalogue</a></li>
-                    <li class="menu-item hover:text-[#a87560]"><a href="#">Panier</a></li>
-                    <li class="menu-item hover:text-[#a87560]"><a href="#">Contact</a></li>
+
+            <nav aria-label="Navigation principale"
+                class="col-span-2 md:col-span-3 justify-self-center w-full md:w-auto">
+
+                <ul class="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-base">
+
+                    <li class="menu-item hover:text-[#a87560]">
+                        <a href="acceuil.html"
+                            aria-current="page"
+                            class="focus-visible:outline-2 focus-visible:outline-offset-4">
+                            Accueil
+                        </a>
+                    </li>
+
+                    <li class="menu-item hover:text-[#a87560]">
+                        <a href="produits.html"
+                            class="focus-visible:outline-2 focus-visible:outline-offset-4">
+                            Catalogue
+                        </a>
+                    </li>
+
+                    <li class="menu-item hover:text-[#a87560]">
+                        <a href="panier.html"
+                            class="focus-visible:outline-2 focus-visible:outline-offset-4">
+                            Panier
+                        </a>
+                    </li>
+
+                    <li class="menu-item hover:text-[#a87560]">
+                        <a href="categories.html"
+                            class="focus-visible:outline-2 focus-visible:outline-offset-4">
+                            Catégories
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
 
         </div>
     </header>
-        
+
     <main>
 
+        
         <section class="hero">
-         <img src="homePage/Stunning Moroccan Living Room with Colorful Handmade Pillows _ Cozy Boho Decor Inspiration.jpg" class = "hero-imag block w-full h-72 object-cover" >
-         <div class="hero-box w-full text-center rounded-xl px-6 py-10 sm:px-40">
-         <p class="mb-3 font-semibold uppercase tracking-widest text-amber-800">
-            Moroccan Handmade Crafts
-          </p>
 
-            <h2 class="mb-4 text-3xl font-bold">
+            <img
+                src="homePage/Stunning Moroccan Living Room with Colorful Handmade Pillows _ Cozy Boho Decor Inspiration.jpg"
+                alt="Salon marocain décoré avec des coussins artisanaux colorés"
+                class="hero-imag block w-full h-72 object-cover">
+
+            <div class="hero-box w-full text-center rounded-xl px-6 py-10 sm:px-40">
+
+                <p class="mb-3 font-semibold uppercase tracking-widest text-amber-800">
+                    Moroccan Handmade Crafts
+                </p>
+
+                <h2 class="mb-4 text-3xl font-bold">
                     <i>Moroccan Artizana</i>
                 </h2>
 
-              <p class = "text-lg mb-6">
-              Morrocan crafts the contry's rich culture and traditions
+                <p class="text-lg mb-6">
+                    Moroccan crafts reflect the country's rich culture and traditions.
                 </p>
-                <ul clss ="list-disc list-inside space-y-3 text-left max-w-xl mx-auto"> 
-                  <li>100% morrocan materials and products</li></h>
-                   <li>high and luxury  products and crafts in our shop</li>
-                   <li>Shop authentic products</li>
-                 </ul>
-             </div>
-           </div>
-          <div class="brown-line"></div>
-       <div class="beige-line"></div>
-       <section class="mx-auto max-w-7xl px-5 py-12">
+
+                <ul class="list-disc list-inside space-y-3 text-left max-w-xl mx-auto">
+                    <li>100% Moroccan materials and products</li>
+                    <li>High-quality products and crafts in our shop</li>
+                    <li>Shop authentic products</li>
+                </ul>
+
+                <a href="produits.html"
+                    class="inline-block mt-6 rounded-md bg-[#a87560] px-6 py-3 font-semibold text-white hover:bg-[#895b48] focus-visible:outline-2 focus-visible:outline-offset-4">
+                    Discover Our Products
+                </a>
+
+            </div>
+
+        </section>
+
+        <div class="brown-line" aria-hidden="true"></div>
+        <div class="beige-line" aria-hidden="true"></div>
+
+        <section class="mx-auto max-w-7xl px-5 py-12">
 
             <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 
-              
                 <div class="craft-box craft-box-one flex min-h-[280px] items-center justify-center rounded-xl p-6 text-center">
 
                     <div class="craft-box-text w-full max-w-sm rounded-lg p-6">
@@ -116,15 +175,13 @@
                         </p>
 
                         <a href="categories.html"
-                           class="inline-block rounded-md bg-[#a87560] px-6 py-3 font-semibold text-white hover:bg-[#895b48]">
+                            class="inline-block rounded-md bg-[#a87560] px-6 py-3 font-semibold text-white hover:bg-[#895b48] focus-visible:outline-2 focus-visible:outline-offset-4">
                             Explore Categories
                         </a>
 
                     </div>
                 </div>
 
-
-               
                 <div class="craft-box craft-box-two flex min-h-[280px] items-center justify-center rounded-xl p-6 text-center">
 
                     <div class="craft-box-text w-full max-w-sm rounded-lg p-6">
@@ -138,7 +195,7 @@
                         </p>
 
                         <a href="produits.html"
-                           class="inline-block rounded-md bg-[#a87560] px-6 py-3 font-semibold text-white hover:bg-[#895b48]">
+                            class="inline-block rounded-md bg-[#a87560] px-6 py-3 font-semibold text-white hover:bg-[#895b48] focus-visible:outline-2 focus-visible:outline-offset-4">
                             Discover Products
                         </a>
 
@@ -149,37 +206,36 @@
         </section>
 
 
-        <!-- FIVE CIRCLES UNDER THE BOXES -->
-        <section class="px-5 pb-16 pt-4">
+        <section class="px-5 pb-16 pt-4" aria-labelledby="categories-title">
 
-            <h2 class="mb-8 text-center text-2xl font-bold">
+            <h2 id="categories-title" class="mb-8 text-center text-2xl font-bold">
                 Explore Our Crafts
             </h2>
 
             <div class="flex flex-wrap items-center justify-center gap-6">
 
                 <a href="categories.html"
-                   class="craft-circle bg-[#f1dfce]">
+                    class="craft-circle bg-[#f1dfce] focus-visible:outline-2 focus-visible:outline-offset-4">
                     <span>Pottery</span>
                 </a>
 
                 <a href="categories.html"
-                   class="craft-circle bg-[#e8c6b5]">
+                    class="craft-circle bg-[#e8c6b5] focus-visible:outline-2 focus-visible:outline-offset-4">
                     <span>Carpets</span>
                 </a>
 
                 <a href="categories.html"
-                   class="craft-circle bg-[#eadfba]">
+                    class="craft-circle bg-[#eadfba] focus-visible:outline-2 focus-visible:outline-offset-4">
                     <span>Lanterns</span>
                 </a>
 
                 <a href="categories.html"
-                   class="craft-circle bg-[#d9c7b5]">
+                    class="craft-circle bg-[#d9c7b5] focus-visible:outline-2 focus-visible:outline-offset-4">
                     <span>Leather</span>
                 </a>
 
                 <a href="categories.html"
-                   class="craft-circle bg-[#e8d9ce]">
+                    class="craft-circle bg-[#e8d9ce] focus-visible:outline-2 focus-visible:outline-offset-4">
                     <span>Jewellery</span>
                 </a>
 
@@ -187,11 +243,30 @@
 
         </section>
 
+        
+        <section class="mx-auto max-w-7xl px-5 py-12"
+            aria-labelledby="featured-title">
+
+            <h2 id="featured-title" class="mb-4 text-center text-2xl font-bold">
+                Our Featured Products
+            </h2>
+
+            <p class="mb-8 text-center">
+                Discover unique creations made with Moroccan craftsmanship.
+            </p>
+
+            <div class="text-center">
+                <a href="produits.html"
+                    class="inline-block rounded-md bg-[#a87560] px-6 py-3 font-semibold text-white hover:bg-[#895b48] focus-visible:outline-2 focus-visible:outline-offset-4">
+                    View All Products
+                </a>
+            </div>
+
+        </section>
+
     </main>
 
-
-   
-    <footer class="bg-[#a87560] px-5 py-6 text-center text-white">
+    <footer class="bg-[#a87560] px-5 py-8 text-center text-white">
 
         <p class="font-semibold">Craft Market</p>
 
@@ -199,27 +274,45 @@
             100% Moroccan handmade crafts.
         </p>
 
+        <nav aria-label="Navigation de pied de page" class="mt-4">
+            <ul class="flex flex-wrap justify-center gap-4 text-sm">
+
+                <li>
+                    <a href="acceuil.html"
+                        class="underline focus-visible:outline-2 focus-visible:outline-offset-4">
+                        Accueil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="produits.html"
+                        class="underline focus-visible:outline-2 focus-visible:outline-offset-4">
+                        Catalogue
+                    </a>
+                </li>
+
+                <li>
+                    <a href="categories.html"
+                        class="underline focus-visible:outline-2 focus-visible:outline-offset-4">
+                        Catégories
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html"
+                        class="underline focus-visible:outline-2 focus-visible:outline-offset-4">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <p class="mt-5 text-sm">
+            &copy; 2026 Craft Market. All rights reserved.
+        </p>
+
     </footer>
 
 </body>
 </html>
-
-         
-        
-           
-
-      
-       
-
-       
-        
-        
-
-
-            
-             
-       
-           
-
-   
-
