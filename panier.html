@@ -27,10 +27,124 @@
         .quantity-input::-webkit-outer-spin-button {
             -webkit-appearance: none;
         }
+
+        .marquee {
+            width: 100%;
+            background-color: #a87560;
+            overflow: hidden;
+            color: white;
+            padding: 15px 0;
+        }
+        .marquee-content {
+            display: flex;
+            width: max-content;
+            gap: 40px;
+            white-space: nowrap;
+            animation: defilement 10s linear infinite;
+        }
+        @keyframes defilement {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-30%);
+            }
+        }
+        .menu-item{
+            padding: 10px;
+            list-style: none;
+            position: relative;
+            transition: color 0.3s ease;
+
+        }
+        .menu-item::after{
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #a87560;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease;
+        }
+        .menu-item:hover::after,
+        .menu-item.active::after{
+            width: 100%;
+        }
+
+        .active{
+            color: #a87560;
+        }
+
+      
+
+        header i:hover{
+            color: #a87560;
+            font-size: 21px;
+        }
+        h1{
+            font-family: 'Irish Grover', cursive;;
+        }
+        .icons{
+            position: relative;
+            right: 0;
+        }
     </style>
 </head>
 <body class="bg-white text-[#34312d]">
-    <!-- HEADER -->
+    <!-- start Header-->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+            <span>100% fabriqué au Maroc depuis 2026</span>
+            <span>Livraison partout</span>
+        </div>
+    </div>
+    <header class="w-full px-4 md:px-10 py-4 border-b border-gray-200">
+
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 items-center gap-y-3">
+            
+            
+            <div class="hidden md:block"></div>
+
+            <h1 class="text-2xl md:text-[32px] font-bold text-gray-900 justify-self-start md:justify-self-center">
+                Craft Market
+            </h1>
+
+            <div class="flex items-center gap-3 text-xl md:text-[20px] justify-self-end">
+                <i class="fa-regular fa-heart cursor-pointer hover:text-[#a87560]"></i>
+                <i class="fa-solid fa-magnifying-glass cursor-pointer hover:text-[#a87560]"></i>
+                <a href="#"><i class="fa-solid fa-store hover:text-[#a87560]"></i></a>
+                
+                <button class="md:hidden ml-1 text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+            
+            <nav class="hidden md:flex justify-self-center md:col-span-3">
+                <ul class="flex items-center gap-6 text-base">
+                    <li class="menu-item hover:text-[#a87560]"><a href="homePage.html">Accueil</a></li>
+                    <li class="menu-item active hover:text-[#a87560] font-semibold border-[#a87560] pb-1"><a href="catalogue.html">Catalogue</a></li>
+                    <li class="menu-item hover:text-[#a87560]"><a href="panier.html">Panier</a></li>
+                    <li class="menu-item hover:text-[#a87560]"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!--end header-->
+    <!-- HEADER 
     <header class="border-b border-[#E9E2DC]">
         <div class="max-w-7xl mx-auto px-6 py-6">
             <div class="flex items-center justify-between gap-6">
@@ -71,7 +185,8 @@
 
             </div>
         </div>
-    </header>
+    </header> -->
+
     <!-- FIL D'ARIANE -->
     <div class="max-w-7xl mx-auto px-6 pt-7">
         <p class="text-xs text-stone-400">
@@ -80,10 +195,10 @@
             <span class="text-stone-600">Votre panier</span>
         </p>
     </div>
-    <!-- MAIN -->
+   <!-- MAIN -->
     <main class="max-w-7xl mx-auto px-6 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16">
-             <!-- PANIER -->
+       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16">
+            <!-- PANIER -->
              <section class="lg:col-span-2">
                 <div class="mb-10">
                     <h1 class="text-4xl md:text-5xl font-normal">
@@ -102,8 +217,347 @@
                     <span class="text-center">Quantité</span>
                     <span class="text-right">Total</span>
                 </div>
+
+                <!-- PRODUIT 1 -->
+                <article class="grid grid-cols-[90px_1fr] sm:grid-cols-[100px_1fr_110px_75px] gap-4 items-center py-5 border-b border-[#E9E2DC]">
+
+                    <img
+                        src="images.jpg"
+                        alt="Tasse en céramique"
+                        class="w-full h-28 object-cover bg-stone-100 rounded-[5px]"
+                    >
+
+                    <div>
+                        <h3 class="text-lg leading-snug">Tasse en grès façonnée à la main</h3>
+                        <p class="text-xs text-stone-400 mt-2">Grès · Collection Terre</p>
+                        <p class="text-sm mt-2">24,00 € / pièce</p>
+                        <button class="text-xs text-stone-400 underline mt-2 hover:text-red-600">
+                            Retirer
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-center border border-stone-200 h-9">
+                        <button class="px-2 hover:text-[#9b6546]">−</button>
+                        <input id="q1" class="quantity-input text-sm" type="number" value="2" min="1">
+                        <button class="px-2 hover:text-[#9b6546]">+</button>
+                    </div>
+
+                    <strong id="total1" class="text-sm text-right font-medium">48,00 €</strong>
+                </article>
+
+                <!-- PRODUIT 2 -->
+                <article class="grid grid-cols-[90px_1fr] sm:grid-cols-[100px_1fr_110px_75px] gap-4 items-center py-5 border-b border-[#E9E2DC]">
+
+                    <img
+                        src="images (1).jpg"
+                        alt="Plaid tissé"
+                        class="w-full h-28 object-cover bg-stone-100 rounded-[5px]"
+                    >
+
+                    <div>
+                        <h3 class="text-lg leading-snug">Plaid tissé à la main</h3>
+                        <p class="text-xs text-stone-400 mt-2">Coton · 130 × 170 cm</p>
+                        <p class="text-sm mt-2">69,00 € / pièce</p>
+                        <button class="text-xs text-stone-400 underline mt-2 hover:text-red-600">
+                            Retirer
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-center border border-stone-200 h-9">
+                        <button class="px-2 hover:text-[#9b6546]">−</button>
+                        <input id="q2" class="quantity-input text-sm" type="number" value="1" min="1">
+                        <button class="px-2 hover:text-[#9b6546]">+</button>
+                    </div>
+
+                    <strong id="total2" class="text-sm text-right font-medium">69,00 €</strong>
+                </article>
+
+                <!-- PRODUIT 3 -->
+                <article class="grid grid-cols-[90px_1fr] sm:grid-cols-[100px_1fr_110px_75px] gap-4 items-center py-5 border-b border-[#E9E2DC]">
+
+                    <img
+                        src="images (2).jpg"
+                        alt="Bougie artisanale"
+                        class="w-full h-28 object-cover bg-stone-100 rounded-[5px]"
+                    >
+
+                    <div>
+                        <h3 class="text-lg leading-snug">Bougie artisanale Santal</h3>
+                        <p class="text-xs text-stone-400 mt-2">Cire végétale · 220 g</p>
+                        <p class="text-sm mt-2">32,00 € / pièce</p>
+                        <button class="text-xs text-stone-400 underline mt-2 hover:text-red-600">
+                            Retirer
+                        </button>
+                    </div>
+
+                    <div class="flex items-center justify-center border border-stone-200 h-9">
+                        <button  class="px-2 hover:text-[#9b6546]">−</button>
+                        <input id="q3" class="quantity-input text-sm" type="number" value="1" min="1">
+                        <button class="px-2 hover:text-[#9b6546]">+</button>
+                    </div>
+
+                    <strong id="total3" class="text-sm text-right font-medium">32,00 €</strong>
+                </article>
+
+                <!-- SOUS TOTAL -->
+                <div class="flex items-center justify-between py-6">
+                    <span class="text-sm font-medium">Sous-total</span>
+                    <strong id="sousTotal" class="text-lg font-medium">149,00 €</strong>
+                </div>
+
+                <a href="#" class="inline-flex items-center gap-2 text-sm text-stone-500 hover:text-[#9b6546] underline">
+                    <span><i class="fa-solid fa-arrow-left"></i></span> Continuer mes achats
+                </a>
+
+                
+             </section>
+
+             <!-- COMMANDE -->
+            <aside class="lg:col-span-1">
+                <!-- Étapes de commande -->
+                <div class="flex items-center gap-3 text-xs whitespace-nowrap my-4">
+
+                    <!-- Étape 1 -->
+                    <div class="flex items-center gap-2 text-[#704b35]">
+                        <span class="flex h-[22px] w-[22px] items-center justify-center
+                                    rounded-full bg-[#704b35] text-white">
+                            1
+                        </span>
+                        <span class="font-medium">Panier</span>
+                    </div>
+
+                    <div class="h-px w-8 bg-stone-200"></div>
+
+                    <!-- Étape 2 -->
+                    <div class="flex items-center gap-2 text-stone-400">
+                        <span class="flex h-[22px] w-[22px] items-center justify-center
+                                    rounded-full bg-stone-100">
+                            2
+                        </span>
+                        <span>Livraison</span>
+                    </div>
+
+                    <div class="h-px w-8 bg-stone-200"></div>
+
+                    <!-- Étape 3 -->
+                    <div class="flex items-center gap-2 text-stone-400">
+                        <span class="flex h-[22px] w-[22px] items-center justify-center
+                                    rounded-full bg-stone-100">
+                            3
+                        </span>
+                        <span>Paiement</span>
+                    </div>
+
+                </div>
+            <div class="bg-[#F8F5F1] p-6 md:p-8  lg:top-8 rounded-[10px]">
+
+                    <h2 class="text-2xl font-normal mb-7">Votre commande</h2>
+
+                    <div class="flex justify-between gap-4 text-sm mb-4">
+                        <span class="text-stone-500">Sous-total des articles</span>
+                        <span id="resumeSousTotal">149,00 €</span>
+                    </div>
+
+                    <div class="flex justify-between gap-4 text-sm mb-5">
+                        <span class="text-stone-500">Livraison standard</span>
+                        <span class="text-green-700">Offerte</span>
+                    </div>
+
+                    <label class="flex gap-3 items-start text-xs text-stone-600 mb-6">
+                        <input type="checkbox" class="accent-[#9b6546] mt-0.5">
+                        <span>Vous souhaitez recevoir une offre spéciale ?</span>
+                    </label>
+
+                    <div class="border-t border-stone-200 pt-5 mb-6">
+                        <div class="flex justify-between items-center gap-3">
+                            <div>
+                                <h3 class="font-medium">Total</h3>
+                                <p class="text-xs text-stone-400 mt-1">Toutes taxes comprises</p>
+                            </div>
+
+                            <strong id="totalCommande" class="text-2xl font-normal">149,00 €</strong>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-[#946343] hover:bg-[#795035] text-white py-4 px-5 flex justify-between items-center text-sm transition-colors rounded-[5px]">
+                        <span>Commander</span>
+                        <span>→</span>
+                    </button>
+
+                    <p class="text-center text-xs text-stone-500 mt-5">
+                        <i class="fa-solid fa-lock"></i> Paiement 100 % sécurisé
+                    </p>
+
+                    <div class="flex justify-center gap-4 mt-4 text-xs font-semibold text-stone-800">
+                        <span class="bg-white p-2 border border-[#E9E2DC] rounded-[5px]">VISA</span>
+                        <span class="bg-white p-2 border border-[#E9E2DC] rounded-[5px]">Mastercard</span>
+                        <span class="bg-white p-2 border border-[#E9E2DC] rounded-[5px]">PayPal</span>
+                    </div>
+
+
+                    
+                    
+                </div>
+                <div class=" mt-7 pt-5">
+                    <details class="group">
+                        <summary class="cursor-pointer list-none flex justify-between text-sm">
+                            <span>Vous avez un code promotionnel ?</span>
+                            <span>+</span>
+                        </summary>
+
+                        <div class="flex mt-4 gap-2">
+                            <input
+                                type="text"
+                                placeholder="Votre code"
+                                class="w-full min-w-0 border border-stone-300 bg-white px-3 py-3 text-sm outline-none focus:border-[#946343]"
+                            >
+                            <button class="bg-stone-800 text-white px-4 text-sm">
+                                OK
+                            </button>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="border-t border-[#E9E2DC] mt-5 pt-5">
+                    <div class="flex gap-3 items-start">
+                        <span class="text-[#946343]"><i class="fa-solid fa-box-archive"></i></span>
+                        <div>
+                            <h4 class="text-sm font-medium">Chez vous entre le 15 et le 17 octobre</h4>
+                            <p class="text-xs text-stone-500 mt-2 leading-relaxed">
+                                Préparez-vous à recevoir vos articles.
+                                Livraison suivie à domicile.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
+
+        <!-- AVANTAGES -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 pt-8 border-t border-[#E9E2DC]">
+
+                <div class="flex lg:justify-center lg:items-center gap-3">
+                    <span class="text-xl text-[#946343]"><i class="fa-solid fa-car-side"></i></span>
+                    <div>
+                        <h4 class="text-sm font-medium">Livraison offerte</h4>
+                        <p class="text-xs text-stone-400 mt-1">Dès 100 € d'achat</p>
+                    </div>
+                </div>
+
+                <div class="flex lg:justify-center lg:items-center gap-3">
+                    <span class="text-xl text-[#946343]"><i class="fa-solid fa-arrow-rotate-right"></i></span>
+                    <div>
+                        <h4 class="text-sm font-medium">Retours sous 30 jours</h4>
+                        <p class="text-xs text-stone-400 mt-1">Le temps de vous décider</p>
+                    </div>
+                </div>
+
+                <div class="flex lg:justify-center lg:items-center gap-3 ">
+                    <span class="text-xl text-[#946343]"><i class="fa-solid fa-hand-holding-heart"></i></span>
+                    <div>
+                        <h4 class="text-sm font-medium">À votre écoute</h4>
+                        <p class="text-xs text-stone-400 mt-1">Un conseil, une question ?</p>
+                    </div>
+                </div>
+
+            </div>
     </main>
+
+    <!--Footer Start-->
+
+     <footer class="py-4 text-white flex flex-col  w-full mx-auto items-center text-center  bg-[#a87560] ">
+
+        <div class="md:hidden">
+
+            <div class="max-w-[380px] space-y-4 ">
+                <h3 class="text-2xl ">Craft Market</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum praesentium </p>
+            </div>
+
+            <hr class="my-6 border w-[400px] border-gray-300">
+
+            <div class=" grid grid-cols-2 gap-5 w-full  ">
+
+                <p class="text-start px-2"><a href="">Company</a></p>
+                <p><a href="">140, avenue Hassan II, Safi</a></p>
+                <p class="text-start px-2"><a href="">+212 649-537-454</a></p>
+                <p><a href="">CraftMarcket@gmail.com</a></p>
+
+            </div>
+
+            <hr class="my-6 border w-[400px] border-gray-300">
+
+            <div class="flex max-w-[380px] justify-center items-center space-x-8">
+                <div><img src="./productDetails-Images/instagram.svg" alt="instagram" class="w-9"></div>
+                <div><img src="./productDetails-Images/facebook.svg" alt="instagram" class="w-9"></div>
+                <div><img src="./productDetails-Images/linkedin.svg" alt="instagram" class="w-9"></div>
+            </div>
+
+            <hr class="my-6 border w-[400px] border-gray-300">
+
+            <div class="pb-0">
+                <p>@2026 Craft Market All Rights Reserved </p>
+            </div>
+
+        </div>
+
+
+
+        <div class="hidden md:block lg:max-w-[1360px]">
+            <div class="grid grid-cols-4 gap-6 px-6 py-12 text-start lg:gap-8  lg:w-full ">
+                <div>
+                    <h2 class="mb-5 text-4xl  "> Craft Market </h2>
+                    <p class="max-w-[340px] text-lg leading-[1.9rem] "> Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Earum praesentium doloribus, nam alias, aspernatur enim </p>
+                </div> 
+                <div class="pl-24 lg:pl-44">
+                    <h3 class="mb-5 text-3xl">Links</h3>
+                    <ul class="space-y-3 text-lg">
+                        <li><a href="./homePage.html" class="hover:underline">Home</a></li>
+                        <li><a href="/catalogue.html" class="hover:underline">Products</a></li>
+                        <li><a href="./contact.html" class="hover:underline">Contact</a></li>
+                    </ul>
+                </div> 
+                <div class="lg:pl-14">
+                    <h3 class="mb-5 text-3xl">Contact US</h3>
+                    <ul class="space-y-3 text-lg">
+                        <li><a href="#" >140, avenue Hassan II, Safi</a></li>
+                        <li><a href="#" >+212 649-537-454</a></li>
+                        <li><a href="#" >CraftMarcket@gmail.com</a></li>
+                    </ul>
+                </div> 
+                <div class="lg:pl-14">
+                    <h3 class="mb-5 text-3xl">Social</h3>
+                    <ul class="space-y-3 text-lg">
+                        <li><a href="#" class="hover:underline">Linkedin</a></li>
+                        <li><a href="#" class="hover:underline">Facebook</a></li>
+                        <li><a href="#" class="hover:underline">Instagram</a></li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="border-t border-gray-300 py-2 text-center text-lg">
+                 @2026 Craft Market All Rights Reserved
+            </div>
+
+        </div>
+
+
+
+
+    </footer>
+
+    <!--Footer End-->
+    <!-- FOOTER 
+    <footer class="border-t border-[#E9E2DC] mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between gap-4 text-xs text-stone-400">
+            <p>© 2026 Craft Market. Tous droits réservés.</p>
+            <div class="flex gap-5">
+                <a href="#" class="hover:text-stone-700">Mentions légales</a>
+                <a href="#" class="hover:text-stone-700">Confidentialité</a>
+                <a href="#" class="hover:text-stone-700">Contact</a>
+            </div>
+        </div>
+    </footer> -->
     
 </body>
 </html>
